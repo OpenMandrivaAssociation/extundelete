@@ -5,7 +5,7 @@ Summary:	Investigation and recovery tool for ext3/4 filesystem
 Group:		File tools
 License:	GPLv2+
 URL:		http://extundelete.sourceforge.net/
-Source:		http://downloads.sourceforge.net/project/extundelete/extundelete/%{version}/extundelete-%{version}.tar.gz
+Source:		http://downloads.sourceforge.net/project/extundelete/extundelete/%{version}/extundelete-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	ext2fs-devel
 
