@@ -1,34 +1,31 @@
 Name:		extundelete
-Version:	0.2.0
-Release:	%mkrel 1
+Version:	0.2.4
+Release:	1
 Summary:	Investigation and recovery tool for ext3/4 filesystem
 Group:		File tools
 License:	GPLv2+
 URL:		http://extundelete.sourceforge.net/
 Source:		http://downloads.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}
-BuildRequires:	ext2fs-devel
+Patch0:		https://src.fedoraproject.org/rpms/extundelete/raw/rawhide/f/extundelete-0.2.4-i_size_high.patch
+Patch1:		extundelete-0.2.4-fix-build.patch
+BuildRequires:	pkgconfig(ext2fs)
 
 %description
 Extundelete is a utility to undelete files from an ext3 or ext4 partition.
 
 %prep
-%setup -q
+%autosetup -p1
+%configure
 
 %build
-%configure2_5x
-%make
+%make_build
 
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_bindir}
 cp src/extundelete %{buildroot}%{_bindir}
 
-%clean
-rm -rf %{buildroot}	
-
 %files
 %defattr(-,root,root)
 %doc LICENSE README 
 %{_bindir}/extundelete
-
