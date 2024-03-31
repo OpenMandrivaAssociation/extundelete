@@ -8,7 +8,10 @@ URL:		http://extundelete.sourceforge.net/
 Source:		http://downloads.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.bz2
 Patch0:		https://src.fedoraproject.org/rpms/extundelete/raw/rawhide/f/extundelete-0.2.4-i_size_high.patch
 Patch1:		extundelete-0.2.4-fix-build.patch
+BuildRequires:	git-core
 BuildRequires:	pkgconfig(ext2fs)
+BuildRequires:	automake
+BuildRequires:	autoconf
 
 %description
 Extundelete is a utility to undelete files from an ext3 or ext4 partition.
