@@ -18,6 +18,8 @@ Extundelete is a utility to undelete files from an ext3 or ext4 partition.
 
 %prep
 %autosetup -p1
+# Just to make the configuire script happy
+git init
 %configure
 
 %build
