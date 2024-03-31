@@ -1,3 +1,5 @@
+%define _disable_rebuild_configure 1
+
 Name:		extundelete
 Version:	0.2.4
 Release:	1
