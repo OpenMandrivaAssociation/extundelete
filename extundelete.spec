@@ -6,7 +6,7 @@ Release:	1
 Summary:	Investigation and recovery tool for ext3/4 filesystem
 Group:		File tools
 License:	GPLv2+
-URL:		http://extundelete.sourceforge.net/
+URL:		https://extundelete.sourceforge.net/
 Source:		http://downloads.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.bz2
 Patch0:		https://src.fedoraproject.org/rpms/extundelete/raw/rawhide/f/extundelete-0.2.4-i_size_high.patch
 Patch1:		extundelete-0.2.4-fix-build.patch
